@@ -1,0 +1,75 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Profile</title>
+{% endblock %}
+{% block body_block %}
+
+
+<style>
+    .pro
+    {
+        text-shadow: 0 0 15px #fff;
+        margin-top: 40px;
+        margin-right: 700px;
+    }
+    .name
+    {
+        padding-right: 700px;
+    
+    }
+    .mail{
+        padding-right: 350px;
+    }
+    .add{
+        padding-right: 520px;
+    }
+    .name span,.mail span,.add span
+    {
+        color: rgb(177, 143, 224);
+    }
+    
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 700px;
+        margin-top: -200px;
+        box-shadow: 0 0 20px rgb(248, 248, 250);
+        animation: zoom 1s ease forwards;
+        opacity: 0;
+        
+        
+    }
+    @keyframes zoom {
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%
+        {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+    }
+
+
+</style>
+    
+    <center>
+    <div>
+            
+      
+        <h1 class="pro">Profile</h1><br><br>
+        <h2 class="name">Username is <span>{{UO.username}}</span></h2>
+        <h2 class="mail">Email of User is <span>{{UO.email}}</span></h2>
+        <h2 class="add">Address : <span>{{PO.address}}</span></h2>
+        
+        <img src="{{PO.profile_pic.url}}" height="300px" width="300px">
+
+    
+    </div>
+    </center>
+
+{% endblock %}

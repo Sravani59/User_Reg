@@ -1,0 +1,50 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+{% block body_block %}
+
+<style>
+    h1
+    {
+        color: rgb(232, 174, 50);
+        margin-top: 150px;
+        
+        
+    }
+
+    h1 {
+        animation: zoom 1s ease forwards;
+        opacity: 0;
+    }
+
+
+
+    @keyframes zoom {
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%
+        {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+    }
+    
+    
+    
+</style>
+    
+    <center>
+        
+        {% if username %}
+        <h1>Welcome to Home page Mr/Ms {{username}} </h1>
+        {% else %}
+        <h1>Welcome to Home Page</h1>
+        {% endif %}
+    </center>
+
+{% endblock %}

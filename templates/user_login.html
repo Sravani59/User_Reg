@@ -1,0 +1,56 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>User_Login</title>
+{% endblock %}
+
+{% block body_block %}
+
+
+<style>
+    div{
+        margin-top: 50px;
+        margin-left: 350px;
+        margin-right: 350px;
+        background-color:rgb(33, 33, 90);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 30px;
+        }
+
+    .btn
+    {
+     background-color:rgb(94, 94, 146);
+
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    
+    }
+    .btn:hover
+    {
+    box-shadow: 0 0 15px rgb(94, 94, 146);
+    }
+</style>
+    
+    <center>
+     <div>
+        <form method='POST'>
+            {% csrf_token %}
+
+           <label for="un">Username</label>
+           <input type="text" name="un" id="un"><br><br>
+
+           <label for="pw">Password</label>
+           <input type="password" name="pw" id="pw"><br><br>
+
+
+
+            <input type="submit" value="Login" class="btn">
+        </form>
+    </div>
+    </center>
+
+{% endblock %}

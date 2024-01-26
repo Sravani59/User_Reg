@@ -1,0 +1,56 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Registration</title>
+{% endblock %}
+
+
+{% block body_block %}
+
+<style>
+
+    div{
+        background-color:rgb(33, 33, 90);
+        margin-left: 270px;
+        margin-right: 270px;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-radius: 20px;
+    }
+
+    h1{
+        color: #fff;
+        text-shadow: 0 0 15px #fff;
+    }
+
+    .btn
+    {
+        border-radius: 15px;
+        background-color: rgb(94, 94, 146);
+        color: #fff;
+
+    }
+    .btn:hover{
+        box-shadow: 0 0 15px rgb(94, 94, 146);
+    }
+</style>
+    
+    <center>
+        <div>
+        <h1>Registration Form</h1>
+        <form method='POST' enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ ufo.as_p }}
+            {{ pfo.as_p }}
+
+
+
+
+
+            <input type="submit" value="Register" class="btn">
+        </form>
+    </div>
+    </center>
+
+{% endblock %}
